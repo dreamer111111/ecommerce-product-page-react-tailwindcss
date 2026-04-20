@@ -21,6 +21,10 @@ const App = () => {
       <Thumbnail />
       
       
+      <Button onClick={handleAddToCart}>
+        <img src="/images/icon-cart.svg" alt="" aria-hidden="true" />
+        <span>Add to cart</span>
+      </Button>
     </main>
   );
 };
