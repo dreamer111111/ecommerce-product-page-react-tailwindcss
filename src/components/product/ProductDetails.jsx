@@ -39,7 +39,7 @@ const ProductDetails = ({ quantity, handleIncrease, handleDecrease }) => {
           increase={handleIncrease}
           decrease={handleDecrease}
         />
-        <Button children="Add to cart" onClick={handleAddToCart} />
+        <Button children="Add to cart"  onClick={handleAddToCart} />
       </div>
     </div>
   );

@@ -16,7 +16,6 @@ const App = () => {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center md:gap-6 md:p-8">
       <Navbar />
-      <CardModal />
       <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
         <ProductGallery />
         <ProductDetails quantity={quantity} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />
