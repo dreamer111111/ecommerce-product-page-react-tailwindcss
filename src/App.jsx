@@ -3,8 +3,7 @@ import "./index.css";
 import CardModal from "./components/layout/CartModal.jsx";
 import Navbar from "./components/layout/Navbar.jsx";
 import ProductGallery from "./components/product/ProductGallery.jsx";
-import QuantitySelector from "./components/product/QuantitySelector.jsx";
-import Thumbnail from "./components/product/Thumbnail.jsx";
+import ProductDetails from "./components/product/ProductDetails.jsx";
 
 const App = () => {
   const [quantity, setQuantity] = React.useState(0);
@@ -15,12 +14,15 @@ const App = () => {
     setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
   };
   return (
-    <main>
+    <main className="min-h-screen flex flex-col items-center justify-center md:gap-6 md:p-8">
       <Navbar />
       <CardModal />
-      <ProductGallery />
-      <QuantitySelector quantity={quantity} increase={handleIncrease} decrease={handleDecrease} />
-      <Thumbnail />
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12">
+        <ProductGallery />
+        <ProductDetails quantity={quantity} handleIncrease={handleIncrease} handleDecrease={handleDecrease} />
+      </div>
+      
+      
     </main>
   );
 };
