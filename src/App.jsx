@@ -30,7 +30,7 @@ const App = () => {
         <div className="relative w-full max-w-6xl">
         {isCartOpen && <CardModal />}
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-6 mt-8 md:mt-2">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-6 mt-8 md:mt-10">
         <ProductGallery onImageClick={handleOpenLightbox} />
         <ProductDetails
           quantity={quantity}
