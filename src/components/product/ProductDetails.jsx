@@ -39,7 +39,10 @@ const ProductDetails = ({ quantity, handleIncrease, handleDecrease }) => {
           increase={handleIncrease}
           decrease={handleDecrease}
         />
-        <Button children="Add to cart"  onClick={handleAddToCart} />
+        <Button  onClick={handleAddToCart} >
+          <img src="images/icon-cart.svg" alt="" />
+          <span>Add to cart</span>
+        </Button>
       </div>
     </div>
   );

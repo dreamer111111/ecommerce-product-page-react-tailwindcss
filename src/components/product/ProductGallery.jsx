@@ -2,7 +2,7 @@ import { useState } from "react";
 import Thumbnail from "./Thumbnail.jsx";
 import { PRODUCT_IMAGES } from "../../data/data.js";
 
-const ProductGallery = () => {
+const ProductGallery = ({onImageClick}) => {
   
 
   const [currentindex, setCurrentIndex] = useState(0);
@@ -38,6 +38,7 @@ const ProductGallery = () => {
           src={PRODUCT_IMAGES[currentindex].main}
           alt={`Product Image ${currentindex + 1}`}
           className="w-full h-75 object-cover md:h-auto cursor-pointer"
+          onClick={onImageClick}
         />
       </div>
 

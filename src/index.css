@@ -24,12 +24,15 @@
 }
 @layer base {
   body {
-    @apply bg-white font-kumbh-sans text-black antialiased;
+    @apply bg-white font-kumbh-sans text-very-dark-blue antialiased;
   }
   h1, h2, h3{
-    @apply font-bold;
+    @apply text-very-dark-blue font-bold leading-tight;
   }
   p{
-    @apply text-dark-grayish-blue font-regular;
+    @apply text-dark-grayish-blue font-normal leading-relaxed;
+  }
+  button{
+    @apply cursor-pointer transition-colors duration-200 ease-in-out;
   }
 }
