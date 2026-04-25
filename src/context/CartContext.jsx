@@ -10,10 +10,13 @@ export const CartProvider = ({ children }) => {
     setCartItems([{ ...product, quantity }]);
   };
 
-  const deleteItem = () => setCartItems([]);
+  const deleteItem = (id) => {
+    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+  };
+  const totalItems = cartItems.reduce((total, item) => total + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cartItems, addItem, deleteItem }}>
+    <CartContext.Provider value={{ cartItems, addItem, deleteItem, totalItems }}>
       {children}
     </CartContext.Provider>
   );

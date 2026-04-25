@@ -8,7 +8,7 @@ const ProductGallery = ({onImageClick}) => {
   const [currentindex, setCurrentIndex] = useState(0);
 
   return (
-    <div className="flex flex-col gap-8 md:max-w-111.25">
+    <div className="flex flex-col gap-8 w-full md:max-w-111.25">
       <div className="relative overflow-hidden md:rounded-2xl">
         <div className="absolute inset-0 flex items-center justify-between px-4 md:hidden">
           <button
@@ -26,8 +26,8 @@ const ProductGallery = ({onImageClick}) => {
           className="bg-white w-10 h-10 rounded-full flex items-center justify-center shadow-lg active:scale-90 transition-transform"
             aria-label="Next image"
             onClick={() =>
-              setCurrentIndex((prev) =>
-                prev === PRODUCT_IMAGES.length - 1 ? 0 : prev + 1,
+              setCurrentIndex((next) =>
+                next === PRODUCT_IMAGES.length - 1 ? 0 : next + 1,
               )
             }
           >
@@ -42,7 +42,7 @@ const ProductGallery = ({onImageClick}) => {
         />
       </div>
 
-      <div className="hidden md:flex justify-between gap-4">
+      <div className="hidden w-full md:flex justify-between gap-4">
         {PRODUCT_IMAGES.map((image, index) => (
           <Thumbnail
             key={image.id}

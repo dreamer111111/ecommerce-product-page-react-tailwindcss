@@ -44,7 +44,7 @@ const Navbar = ({ onCartClick }) => {
       </div>
 
       {/* Main Navbar Desktop & Mobile Header */}
-      <nav className="flex items-center justify-between py-6 md:py-10 border-b border-grayish-blue/20 px-6 md:px-0">
+      <nav className="flex items-center justify-between py-6 border-b border-grayish-blue/20 px-6 md:px-0">
         <div className="flex items-center gap-4 md:gap-14">
           {/* Menu Toggle Button */}
           <button 
@@ -78,7 +78,7 @@ const Navbar = ({ onCartClick }) => {
         </div>
 
         {/* Action Section (Cart & Profile) */}
-        <div className="flex items-center gap-5 md:gap-10">
+        <div className="flex relative items-center gap-5 md:gap-10">
           <button 
             onClick={onCartClick} 
             className="relative group cursor-pointer"
@@ -91,7 +91,7 @@ const Navbar = ({ onCartClick }) => {
             />
             
             {totalItems > 0 && (
-              <Badge variant="cart" className="absolute -top-2 -right-2 px-1.5 pointer-events-none">
+              <Badge variant="cart" className="absolute -top-2 -right-2 px-1.5 bg-black pointer-events-none">
                 {totalItems}
               </Badge>
             )}

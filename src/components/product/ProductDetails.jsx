@@ -12,7 +12,7 @@ const ProductDetails = ({ quantity, handleIncrease, handleDecrease }) => {
   };
 
   return (
-    <div className="p-6 flex flex-col gap-6 md:gap-8 md:w-1/2">
+    <div className="flex flex-col gap-6 md:gap-6 md:w-1/2 p-6 md:p-20">
       <h1 className="uppercase text-dark-grayish-blue text-md">
         Sneaker Company
       </h1>
@@ -24,7 +24,7 @@ const ProductDetails = ({ quantity, handleIncrease, handleDecrease }) => {
         Featuring a durable rubber outer sole, they'll withstand everything the
         weather can offer.
       </p>
-      <div className="flex items-center justify-between gap-4">
+      <div className="flex items-start md:flex-col justify-between gap-4">
         <div className="flex items-center gap-4">
           <span className="text-3xl font-bold text-black">$125.00</span>
           <Badge children="50%" />

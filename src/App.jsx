@@ -22,7 +22,7 @@ const App = () => {
     setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
   };
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center md:gap-6 md:p-8 relative">
+    <main className="min-h-screen flex flex-col items-center justify-center md:gap-2 md:p-8 relative">
       <Navbar onCartClick={() => setIsCartOpen(!isCartOpen)} />
         {isLightboxOpen && (
         <Lightbox onClose={() => setIsLightboxOpen(false)} />
@@ -30,7 +30,7 @@ const App = () => {
         <div className="relative w-full max-w-6xl">
         {isCartOpen && <CardModal />}
       </div>
-      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mt-8 md:mt-20">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-6 mt-8 md:mt-2">
         <ProductGallery onImageClick={handleOpenLightbox} />
         <ProductDetails
           quantity={quantity}
